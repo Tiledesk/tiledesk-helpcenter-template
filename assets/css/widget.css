@@ -3,6 +3,9 @@
 @media screen and (min-width: 0px) and (max-width: 400px) {
   #header_cover { display: none; }  /* show it on small screens */
 }
+@media screen and (min-width: 0px) and (max-width: 400px) {
+  #header_cover_img { display: none; }  /* show it on small screens */
+}
 
 
 /* AVATAR DATA */
