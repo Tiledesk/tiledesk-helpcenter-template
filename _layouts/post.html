@@ -1,8 +1,6 @@
 ---
 layout: default
 ---
-   <!-- Add CSS x Widget di Tiledesk -->   
-   <link id="myLink" rel="stylesheet" media="screen and (max-width: 0px)" href="{{ '/assets/css/widget.css' | relative_url }}"/>
    {% include header.html %}
    <!-- LAYOUT DEL POST -->
    <!-- Start Page Title Area -->
@@ -54,22 +52,3 @@ layout: default
    </section>
    <!-- End Blog Area -->
    {% include footer_custom.html %}
-   
-<script>
-   /* LEGGO L'URL DELLA PAGINA */
-   console.log("LAYOUT POST");
-   const queryString1 = window.location.search;
-   console.log("queryString "+queryString1);
-   const urlParams1 = new URLSearchParams(queryString1);
-   console.log("urlParams "+urlParams1);
-   /* Add CSS x Widget di Tiledesk */
-   if (urlParams1 == "embedded=tiledesk") {
-     const collection1 = document.getElementById("myLink");
-     console.log("coll1"+collection1)
-     collection1.setAttribute('media','screen and (max-width: 400px)');
-     console.log("HC into widget1");
-   } else {
-     console.log("HC on web");
-   }
-  
-</script>

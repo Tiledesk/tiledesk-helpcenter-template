@@ -45,7 +45,6 @@
 	{% if page.post_image %}<meta name="twitter:card"  content="summary_large_image"><meta name="twitter:image" content="{{ page.post_image }}">{% else %}<meta name="twitter:card"  content="summary"><meta name="twitter:image" content="{{ site.cover_image }}">{% endif %}
 	<!--publish_date for linkedin -->
 	{% if page.date %}<meta name="publish_date" property="og:publish_date" content="{{ page.date | date_to_xmlschema }}" >{% endif %}	
-	
     <!--  Add Favicon -->
 	{% capture favicon_url %}{{site.data.header.favicon_url}}{% endcapture %}
 	{% if favicon_url != "" %}
@@ -58,9 +57,9 @@
 	<!-- Add CSS File -->
     <link rel="stylesheet" href="{{ '/assets/css/app.min.css' | relative_url }} "/>
 	<!-- Add MIO CSS File -->
-    <link rel="stylesheet"  media="screen and (min-width: 1px)" href="{{ '/assets/css/my_help_center.css' | relative_url }} "/>
+    <link rel="stylesheet"  id="myLinkd" media="screen and (min-width: 401px)" href="{{ '/assets/css/my_help_center.css' | relative_url }} "/>
 	<!-- Add CSS x Widget di Tiledesk -->
-	<link rel="stylesheet" media="screen and (max-width: 0px)" href="{{ '/assets/css/widget.css' | relative_url }}"/> 
+	<link rel="stylesheet" id="myLinkw" media="screen and (max-width: 400px)" href="{{ '/assets/css/widget.css' | relative_url }}"/> 
 	<!-- Add BUILDING CSS  -->
 	<!-- <link rel="stylesheet" href="{{ '/assets/css/building.css' | relative_url }} "/> -->
 	<!-- Add SITE-PREVIEW CSS  -->
@@ -102,5 +101,25 @@
 
 				});
 		</script>
+		<script>
+			/* LEGGO L'URL DELLA PAGINA */
+			console.log("LAYOUT POST");
+			const queryString1 = window.location.search;
+			console.log("queryString "+queryString1);
+			const urlParams1 = new URLSearchParams(queryString1);
+			console.log("urlParams "+urlParams1);
+			const collectiond = document.getElementById("myLinkd");
+			const collectionw = document.getElementById("myLinkw");
+			/* Add CSS x Widget di Tiledesk */
+			if (urlParams1 == "embedded=tiledesk") {
+			  
+			  console.log("HC into widget1");
+			} else {
+			 collectionw.setAttribute('media','screen and (max-width: 0px)');
+			 collectiond.setAttribute('media','screen and (min-width: 1px)');
+			  console.log("HC on web");
+			}
+		   
+		 </script>
 </body>      
 </html>
