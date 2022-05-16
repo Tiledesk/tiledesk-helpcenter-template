@@ -1,15 +1,17 @@
 ---
 layout: default
 ---
+   <!-- Add CSS x Widget di Tiledesk -->   
+   <link id="myLink" rel="stylesheet" media="screen and (max-width: 0px)" href="{{ '/assets/css/widget.css' | relative_url }}"/>
    {% include header.html %}
    <!-- LAYOUT DEL POST -->
    <!-- Start Page Title Area -->
    {% capture custom_color %}{{site.data.header.custom_color}}{% endcapture %}
    {% capture img_header %}{{site.data.header.img_header}}{% endcapture %}
    {% if img_header != ""%}
-      <section class="page-title-area bg-cover-custom" style= "background-color:{{custom_color}}!important; background-image: url({{img_header}}); min-height: 450px; background-size: cover; background-repeat: no-repeat; background-position: center !important;"> 
+      <section class="page-title-area bg-cover-custom" style= "background-color:{{custom_color}}!important; background-image: url({{img_header}}); min-height: 250px; background-size: cover; background-repeat: no-repeat; background-position: center !important;"> 
    {% else %}
-      <section class="page-title-area bg-cover-custom" id="header_cover"  style="min-height: 450px; background-color:{{custom_color}}!important;">
+      <section class="page-title-area bg-cover-custom" id="header_cover"  style="background-color:{{custom_color}}!important;">
    {% endif %}
    <div class="page-title-wrapper section-spacing">
          {% include search_header.html %}
@@ -39,7 +41,8 @@ layout: default
                   <!-- POST-->
                   {% include post_loop.html %}
                </div>
-               <div class="col-md-5 col-lg-4">
+               <!--nasconde la colonna dei widget a dx quando siano in un widget -->
+               <div id="widget_hide">
                  {% include sidebar_cat_list.html %}
                  {% include sidebar_cat_post.html %}
                  {% include sidebar_new_post_list.html %}
@@ -50,4 +53,23 @@ layout: default
       </div>
    </section>
    <!-- End Blog Area -->
-{% include footer_custom.html %}
+   {% include footer_custom.html %}
+   
+<script>
+   /* LEGGO L'URL DELLA PAGINA */
+   console.log("LAYOUT POST");
+   const queryString1 = window.location.search;
+   console.log("queryString "+queryString1);
+   const urlParams1 = new URLSearchParams(queryString1);
+   console.log("urlParams "+urlParams1);
+   /* Add CSS x Widget di Tiledesk */
+   if (urlParams1 == "embedded=tiledesk") {
+     const collection1 = document.getElementById("myLink");
+     console.log("coll1"+collection1)
+     collection1.setAttribute('media','screen and (max-width: 400px)');
+     console.log("HC into widget1");
+   } else {
+     console.log("HC on web");
+   }
+  
+</script>

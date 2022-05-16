@@ -55,11 +55,12 @@
 	<link rel="shortcut icon" href="{{ '/assets/images/favicon.png' | relative_url }}" type="image/x-icon"/>
 	<link rel="icon" href="{{ '/assets/images/favicon.png' | relative_url }}" type="image/x-icon"/>
 	{% endif %}
-	<!-- Add MIO CSS File -->
-    <link rel="stylesheet" href="{{ '/assets/css/my_help_center.css' | relative_url }} "/>
 	<!-- Add CSS File -->
     <link rel="stylesheet" href="{{ '/assets/css/app.min.css' | relative_url }} "/>
-	
+	<!-- Add MIO CSS File -->
+    <link rel="stylesheet"  media="screen and (min-width: 1px)" href="{{ '/assets/css/my_help_center.css' | relative_url }} "/>
+	<!-- Add CSS x Widget di Tiledesk -->
+	<link rel="stylesheet" media="screen and (max-width: 0px)" href="{{ '/assets/css/widget.css' | relative_url }}"/> 
 	<!-- Add BUILDING CSS  -->
 	<!-- <link rel="stylesheet" href="{{ '/assets/css/building.css' | relative_url }} "/> -->
 	<!-- Add SITE-PREVIEW CSS  -->
@@ -75,6 +76,7 @@
 <body>
    {{ content }}
     <!-- Netfly Identity widget -->
+
 <script>
 	if (window.netlifyIdentity) {
 	  window.netlifyIdentity.on("init", user => {
@@ -99,8 +101,6 @@
 				});
 
 				});
-
-
 		</script>
 </body>      
 </html>

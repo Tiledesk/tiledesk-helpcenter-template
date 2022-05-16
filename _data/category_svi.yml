@@ -23,15 +23,6 @@ category:
     icon: /images/uploads/favicon.png
     button_label: Go
     type: (categoria)
-  - draft: false
-    button_label: Go
-    order: 0
-    url: sezione3
-    label: sezione 3
-    icon: /images/uploads/favicon.png
-    type: (sezione)
-    category_key: categoria2
-    key: sezione3
   - order: 0 
     draft: false
     key: sezione3

@@ -25,7 +25,7 @@
             </li>
          {% endif %}
            {% if page.date %}
-            <li class="list-inline-item"><a href="{{page.author_url}}" target="_blank" style="margin-right: 25px;">{{page.author}}</a><img src="{{ '/assets/images/mycalendardate.png' | relative_url }}" alt="{{page.date}}">{{page.date | date_to_long_string}}</li>
+            <li class="list-inline-item"><a href="{{page.author_url}}" target="_blank" style="margin-right: 25px;">{{page.author}}</a><img id="calendar_img" src="{{ '/assets/images/mycalendardate.png' | relative_url }}" alt="{{page.date}}"><span id="dateupdate">{{page.date | date_to_long_string}}</span></li>
            {% endif %}
          </ul>
       </div>
@@ -33,7 +33,8 @@
    <div class="single-content">
       {{page.content}}
    </div>
-   <div class="single-tags-share">
+    <!--nasconde i TAG del POST quando siamo nel widget-->
+   <div class="single-tags-share" id="widget_hide">
       {% if page.tags.size > 0 %}
       <ul class="single-tags list-inline float-left">
          <strong>Tag:</strong> {% for tag in page.tags %}
@@ -49,9 +50,9 @@
          {% endfor %}
       </ul>
       {% endif %}
-      <div class="social-share-btns">
-         {% include social_share.html %}
-      </div>
+   </div>
+   <div class="single-tags-share">
+      {% include social_share.html %}
    </div>
    <!--
    <nav class="page-pagination mb-5">
@@ -75,3 +76,24 @@
    {% include disqus_comment.html %}
 </div>
 {% endif %}
+<!--PER CAPIRE CHE SIAMO NEL WIDGET E' NECESSARIO AGGIUNGERE ALL'URL /?embedded=tiledesk-->
+<script>
+   const queryString = window.location.search;
+   console.log("queryString "+queryString);
+   const urlParams = new URLSearchParams(queryString);
+   console.log("urlParams "+urlParams);
+   if (urlParams == "embedded=tiledesk") {
+     const collection = document.getElementsByTagName("a");
+     myFunction(collection);
+     console.log("HC into widget");
+   } else {
+     console.log("HC on web");
+   }
+   function myFunction(collection) {
+   console.log("lengh "+collection.length);
+   for (let i = 0; i < collection.length; i++) {
+      collection[i].setAttribute('target', '_blank');
+   }
+   return collection;
+ }
+ </script>

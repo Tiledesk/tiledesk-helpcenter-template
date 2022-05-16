@@ -1,0 +1,38 @@
+
+/* ELIMINA L'HEADER */
+@media screen and (min-width: 0px) and (max-width: 400px) {
+  #header_cover { display: none; }  /* show it on small screens */
+}
+
+
+/* AVATAR DATA */
+@media screen and (max-width: 400px) {
+  #calendar_img {
+    display: none
+  }
+}
+#dateupdate {
+  display: none;
+}
+
+/* ATTENTO ELIMINA IL FOOTER SOTTO I 400PX */
+.section-spacing {
+  display: none;
+}
+
+
+/* COLORA DI NERO IL LINK DELL'AUTORE */
+.black-text a {
+  color: #000 !important;
+}
+
+/* ELIMINA LA BREADCRUMP */
+.breadcrumb {
+  display: none!important;
+}
+
+/* ELIMINARE SPALLA DEX*/
+
+#widget_hide {
+  display: none;
+}
