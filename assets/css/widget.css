@@ -38,6 +38,6 @@
 }
 
 /* ELIMINA IL LOGO*/
-.header-logo {
-  display: none;
+.logores {
+  display: none!important;
 }
