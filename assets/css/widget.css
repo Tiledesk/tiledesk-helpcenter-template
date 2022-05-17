@@ -64,7 +64,7 @@
     object-fit: cover;
     height: 100%;
     width: 100%!important;
-    /*margin-top: 2px;*/
+    margin-top: -1px!important;
     margin: 2px auto;
     display: inline;
     vertical-align: middle;

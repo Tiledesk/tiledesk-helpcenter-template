@@ -112,8 +112,8 @@
                         console.log("queryString-widget "+queryString2);
 			            const urlParams2 = new URLSearchParams(queryString2);
 			            console.log("urlParams-widget "+urlParams2);
-                        if (urlParams2 == "embedded=tiledesk") {
-                            console.log("SONO NEL WIDGET ");
+                        if (urlParams2 != "embedded=tiledesk") {
+                            console.log("SONO NEL WEB ");
                             var tiledesk_id = "{{site.data.tiledesk.id | json}}";
                             window.tiledeskSettings= 
                             {
@@ -129,7 +129,7 @@
                                 fjs.parentNode.insertBefore(js, fjs);
                             }(document,'script','tiledesk-jssdk'));
                         } else {
-                            console.log("SONO NEL WEB ");
+                            console.log("SONO NEL WIDGET ");
                         }
                     </script>   
                     </div>
