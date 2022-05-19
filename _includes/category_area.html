@@ -113,7 +113,7 @@
                      <header class="topics-title">
                         {% assign all_posts = site.categories[category_name] | where: 'draft' ,'false' %}
                         <h5 class="heading-5 text-capitalize font-weight-bold font-size-title"><a
-                              href="{{category_url_cat |  append: '/' | relative_url}}">{{ category_label }}
+                              href="{{category_url_cat |  append: '/' | relative_url}}"><div id="my_category_title_featured">{{ category_label }}</div>
                               <!--({{posts_number}})-->
                            </a></h5>
                      </header>

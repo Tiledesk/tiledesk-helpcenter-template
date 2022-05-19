@@ -14,9 +14,10 @@
                      <div class="col-md-6 col-lg-4">
                         {% capture category_url %}{{category.url}}{% endcapture %}
                         {% assign category_url_cat = "/categories/" | append: category_url %}
-                        <!-- <div class="headline-box wow fadeInUp" data-wow-duration="1s" style="border-style: solid; border-radius: 10px; -->
+                        <!--
                         <div class="headline-box" style="border-style: solid; border-radius: 10px;
-                            width: 350px; height: 250px; cursor: pointer;" onclick="window.location='{{category_url_cat |  append: '/' | relative_url}}';">
+                            width: 350px; height: 250px; cursor: pointer;" onclick="window.location='{{category_url_cat |  append: '/' | relative_url}}';"> -->
+                            <div class="headline-box" onclick="window.location='{{category_url_cat |  append: '/' | relative_url}}';">
                             <div class="headline-logo">
                                 {% capture category_url %}{{category.url}}{% endcapture %}
                                 {% capture category_label %}{{category.label}}{% endcapture %}
@@ -27,7 +28,7 @@
                                 <a href="{{category_url_cat |  append: '/' | relative_url}}"><img src="{{category_icon | relative_url}}" alt="{{category_label}}" class="img-category" width="64px" height="auto"></a>
                             </div>
                             <div class="headline-content" style="overflow: hidden; height: 115px;">
-                                <h4 class="heading-6" style="font-size: 25px; margin-bottom: 10px;"><a style="text-decoration: none !important;" href="{{category_url_cat |  append: '/'| relative_url}}">{{category_label}}</a></h4>
+                                <h4 class="heading-6" id="my_category_title_button"><a style="text-decoration: none !important;" href="{{category_url_cat |  append: '/'| relative_url}}">{{category_label}}</a></h4>
                                 <p style="color: #737373;"> {{category_description}}</p>
 
                                 <!-- <a href="{{category_url_cat |  append: '/'| relative_url}}" class="btn btn-style1">{{category_button_label}}</a> -->
