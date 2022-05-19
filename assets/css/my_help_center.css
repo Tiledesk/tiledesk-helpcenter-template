@@ -46,8 +46,8 @@
 @media screen and (max-width: 400px) {
   .logores {
     width: auto;
-    max-width: 75px;
-    height: 21px;
+    max-width: 113px;
+    height: 32px;
     padding-left: 14px;
   }
 }
@@ -92,14 +92,14 @@
 }
 @media screen and (max-width: 481px) {
   .searchres {
-    width:38%;
+    width:50%;
     height:29px;
     padding: 20px 32px 21px 20px;
   }
 }
 @media screen and (max-width: 400px) {
   .searchres {
-    width:25%;
+    width:38%;
     height:19px;
     padding: 20px 32px 21px 15px;
   }
@@ -882,3 +882,44 @@
       font-weight: 600;
     }
   }
+ 
+  /* NOME CATEGORIA NEI QUADRATI DEI FEATURED HOME DELL HC*/
+
+@media screen and (min-width: 1281px) {
+  #my_category_title_featured{
+      font-size: 25px;
+      margin-bottom: 10px;
+  }
+}
+
+@media screen and (max-width: 1280px) {
+  #my_category_title_featured{
+    font-size: 25px;
+    margin-bottom: 10px;
+  }
+}
+
+@media screen and (max-width: 1025px) {
+  #my_category_title_featured{
+    font-size: 18px;
+    margin-bottom: 8px;
+  }
+}
+@media screen and (max-width: 961px) {
+  #my_category_title_featured{
+    font-size: 18px;
+    margin-bottom: 8px;
+  }
+}
+@media screen and (max-width: 641px) {
+  #my_category_title_featured{
+    font-size: 18px;
+    margin-bottom: 8px;
+  }
+}
+@media screen and (max-width: 481px) {
+  #my_category_title_featured{
+    font-size: 18px;
+    margin-bottom: 8px;
+  }
+}
