@@ -675,11 +675,12 @@
   .headline-box{
     border-style: solid;
     border-radius: 10px;
-    width: 350px; 
-    height: 250px; 
+    width: 300px; 
+    height: 185px; 
     cursor: pointer;
   }
 }
+
 
 @media screen and (max-width: 1025px) {
   .headline-box{
