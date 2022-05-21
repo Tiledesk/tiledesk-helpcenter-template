@@ -110,14 +110,20 @@
 			console.log("urlParams "+urlParams1);
 			const collectiond = document.getElementById("myLinkd");
 			const collectionw = document.getElementById("myLinkw");
+			const frameEl = window.frameElement;
+			console.log("frameEL "+frameEl);
 			/* Add CSS x Widget di Tiledesk */
-			if (urlParams1 == "embedded=tiledesk") {
-			  
+			//if (urlParams1 == "embedded=tiledesk") {
+			if (frameEl) {
 			  console.log("HC into widget1");
+			  console.log("CSS "+collectionw.getAttribute("id"));
+			  console.log("CSS "+collectionw.getAttribute("media"));
 			} else {
 			 collectionw.setAttribute('media','screen and (max-width: 0px)');
 			 collectiond.setAttribute('media','screen and (min-width: 1px)');
-			  console.log("HC on web");
+			 console.log("CSS "+collectionw.getAttribute("id"));
+			 console.log("CSS "+collectionw.getAttribute("media"));
+			 console.log("HC on web");
 			}
 		   
 		 </script>
