@@ -112,7 +112,9 @@
                         console.log("queryString-widget "+queryString2);
 			            const urlParams2 = new URLSearchParams(queryString2);
 			            console.log("urlParams-widget "+urlParams2);
-                        if (urlParams2 != "embedded=tiledesk") {
+                        console.log("window.parent.location "+window.parent.location);
+			            console.log("window.location "+window.location);
+                        if ((urlParams2 == "embedded=tiledesk") || (window.parent.location === window.location)) {
                             console.log("SONO NEL WEB ");
                             var tiledesk_id = "{{site.data.tiledesk.id | json}}";
                             window.tiledeskSettings= 
