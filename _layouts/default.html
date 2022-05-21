@@ -114,7 +114,7 @@
 			console.log("frameEL "+frameEl);
 			/* Add CSS x Widget di Tiledesk */
 			//if (urlParams1 == "embedded=tiledesk") {
-			if (frameEl) {
+			if (frameEl ||(urlParams1 == "embedded=tiledesk")) {
 			  console.log("HC into widget1");
 			  console.log("CSS "+collectionw.getAttribute("id"));
 			  console.log("CSS "+collectionw.getAttribute("media"));
