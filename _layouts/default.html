@@ -113,8 +113,9 @@
 			const frameEl = window.frameElement;
 			console.log("frameEL "+frameEl);
 			/* Add CSS x Widget di Tiledesk */
-			//if (urlParams1 == "embedded=tiledesk") {
-			if (frameEl ||(urlParams1 == "embedded=tiledesk")) {
+			console.log("window.parent.location "+window.parent.location);
+			console.log("window.location "+window.location);
+			if (frameEl ||(urlParams1 == "embedded=tiledesk") || (window.parent.location !== window.location)) {
 			  console.log("HC into widget1");
 			  console.log("CSS "+collectionw.getAttribute("id"));
 			  console.log("CSS "+collectionw.getAttribute("media"));
@@ -123,9 +124,8 @@
 			 collectiond.setAttribute('media','screen and (min-width: 1px)');
 			 console.log("CSS "+collectionw.getAttribute("id"));
 			 console.log("CSS "+collectionw.getAttribute("media"));
-			 console.log("HC on web");
+			 console.log("HC on web1");
 			}
-		   
 		 </script>
 </body>      
 </html>
