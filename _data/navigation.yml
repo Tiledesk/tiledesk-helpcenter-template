@@ -2,24 +2,12 @@ items:
   - text: Home
     url: /
     draft: false
-  - text: Sito Web
-    url: /categories
+  - text: Go to Tiledesk
+    url: https://tiledesk.com/
+    draft: false
+  - text: Guide
+    url: https://help.tiledesk.com/1sa2bs/
+    draft: false
+  - text: Sign up
+    url: https://console.tiledesk.com
     draft: true
-  #- text: Blog
-  #  url: /blog
-  #  draft: true
-  #- text: Contact
-  #  url: /pages/contact
-  #  draft: true
-  - text: Categories
-    url: /categories
-    draft: true
-  - text: Tags
-    url: /tags
-    draft: true
-  - text: Year archive
-    url: /year-archive
-    draft: true
-  #- text: Pages
-  #  url: /pages
-  #  draft: true
