@@ -56,9 +56,10 @@
                <p>{{site.data.ui-text[site.locale].featured_articles_subtitle | default: "" }}</p>
             </h7>
             {% endif %}
+            
             <div class="col">
                <!-- Start Topics  Area -->
-               <div class="topics-service-area">
+               <div class="topics-service-area" style="text-align: center; display: flex; flex-wrap: wrap; ">
                   {% for category in my_categories %}
                   {% capture category_name %}{{ category.key}}{% endcapture %}
                   {% capture category_label %}{{ category.label}}{% endcapture %}
@@ -109,7 +110,7 @@
                   <!--FINE CONTATORE POST IN CATEGORIA-->
                   {% if (all_posts) > 0 %}
                   <!-- <article class="post topics-service bg-color3 wow fadeIn" data-wow-duration="3s"> -->
-                  <article class="post topics-service bg-color3">
+                  <article class="post topics-service bg-color3" style="flex-grow: 1; width:33%; height: 100%; min-width: 240px;">
                      <header class="topics-title">
                         {% assign all_posts = site.categories[category_name] | where: 'draft' ,'false' %}
                         <h5 class="heading-5 text-capitalize font-weight-bold font-size-title"><a
