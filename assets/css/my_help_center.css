@@ -939,3 +939,14 @@
     margin-left: 5px;
   }
 }
+
+/* CSS for Blockquote TAG*/
+blockquote {
+  overflow: hidden;
+  padding-right: 1.5em;
+  padding-left: 1.5em;
+  font-style: italic;
+  border-left: 3px solid transparent;
+  border-color: #eaedf3;
+  margin: 0 0 1rem;
+}

@@ -17,19 +17,6 @@ layout: default
    </section>
    <!-- End Page Title Area -->
    {% include doc_post_breadcrumb.html %}
-   <!--CARICA TUTTE LE LINGUE IN CUI E' STATO TRADOTTO UN ARTICOLO-->
-   <!--
-   <div>
-      <ul>
-         {% assign posts=site.posts | where:"ref", page.ref | sort: 'lang' %}
-         {% for post in posts %}
-           <li style = "display:inline-block; background-color:#eee; list-style-type:none;  margin-right:-1px; padding:6px; border-right:1px solid white;">
-             <a href="{{ post.url }}" class="{{ post.lang }}">{{ post.lang }}</a>
-           </li>
-         {% endfor %}
-      </ul>
-   </div>
-   -->
    <!-- Start Blog  Area -->
    <section class="blog-area bg-color1">
       <div class="blog-wrapper section">
