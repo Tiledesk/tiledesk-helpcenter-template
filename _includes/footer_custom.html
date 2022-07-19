@@ -4,6 +4,8 @@
     <div class="footer-wrapper section-spacing bminus-30">
         <div class="container">
             <div class="row">
+                {% capture footer1_link_title_check %}{{site.data.footer.footer1_link_title_check}}{% endcapture %}
+                {% if footer1_link_title_check == "true" %}
                 <div class="col-md-6 col-lg-4">
                     <div class="footer-widget wow fadeIn" data-wow-duration="1s">
                         {% capture footer_title %}{{site.data.footer.title}}{% endcapture %}
@@ -12,6 +14,9 @@
                         <p>{{footer_subtitle}}</p>
                     </div>
                 </div>
+                {% endif %}
+                {% capture footer2_link_title_check %}{{site.data.footer.footer2_link_title_check}}{% endcapture %}
+                {% if footer2_link_title_check == "true" %}
                 <div class="col-md-6 col-lg-2">
                     <div class="footer-widget wow fadeIn" data-wow-duration="2s">
                         <h5 class="footer-title heading-5">{{site.data.ui-text[site.locale].footer_archive | default: "Archives" }}</h5>
@@ -22,19 +27,31 @@
                         </ul>
                     </div>
                 </div>
-                <!--
+                {% endif %}
+                {% capture footer3_link_title_check %}{{site.data.footer.footer3_link_title_check}}{% endcapture %}
+                {% if footer3_link_title_check == "true" %}
                 <div class="col-md-6 col-lg-3">
                     <div class="footer-widget wow fadeIn" data-wow-duration="3s">
-                        <h5 class="footer-title heading-5">Get Help</h5>
+                        <h5 class="footer-title heading-5">Resources</h5>
                         <ul class="footer-category list-inline">
-                            <li><a href="/pages/support">Support</a></li>
-                            <li><a href="/pages/submit-ticket">Supmit Ticket</a></li>
-                            <li><a href="/pages/register">Register</a></li>
-                            <li><a href="/pages/login">Login</a></li>
+                            {% capture footer_link_name1_check %}{{site.data.footer.footer_link_name1_check}}{% endcapture %}
+                            {% if footer_link_name1_check == "true" %}
+                            <li><a href="{{site.data.footer.footer_link_url1}}" target="_blank">{{site.data.footer.footer_link_name1}}</a></li>
+                            {% endif %}
+                            {% capture footer_link_name2_check %}{{site.data.footer.footer_link_name2_check}}{% endcapture %}
+                            {% if footer_link_name2_check == "true" %}
+                            <li><a href="{{site.data.footer.footer_link_url2}}" target="_blank">{{site.data.footer.footer_link_name2}}</a></li>
+                            {% endif %}
+                            {% capture footer_link_name3_check %}{{site.data.footer.footer_link_name3_check}}{% endcapture %}
+                            {% if footer_link_name3_check == "true" %}
+                            <li><a href="{{site.data.footer.footer_link_url3}}" target="_blank">{{site.data.footer.footer_link_name3}}</a></li>
+                            {% endif %}
                         </ul>
                     </div>
                 </div>
-            -->
+                {% endif %}
+                {% capture footer4_link_title_check %}{{site.data.footer.footer4_link_title_check}}{% endcapture %}
+                {% if footer4_link_title_check == "true" %}
                 <div class="col-md-6 col-lg-3">
                     <div class="footer-widget wow fadeIn" data-wow-duration="4s">
                         <h5 class="footer-title heading-5">{{site.data.ui-text[site.locale].footer_followus | default: "Follow Us" }}</h5>
@@ -86,25 +103,8 @@
                         </ul>
                     </div>
                 </div>
+                {% endif %}
                 <div class="col-md-6 col-lg-3">
-                    <!--
-                    <script type="application/javascript">
-                        var tiledesk_id = "{{site.data.tiledesk.id | json}}";
-                        window.tiledeskSettings = 
-                        {
-                        projectid: tiledesk_id
-                        };
-                        (function(d, s, id) {
-                        var js, fjs = d.getElementsByTagName(s)[0];
-                        if (d.getElementById(id)) return;
-                        js = d.createElement(s); js.id = id; js.async=true;
-                        js.src = "https://widget.tiledesk.com/v4/launch.js";
-                        fjs.parentNode.insertBefore(js, fjs);
-                        //alert("stringa concatenata con " + js.id);
-                        //alert("tiledesk id " + {{site.data.tiledesk.id}});
-                        }(document, 'script', 'tiledesk-jssdk'));
-                       </script>
-                    -->
                        <script type="application/javascript">
                         /* LEGGO L'URL DELLA PAGINA PER CAPIRE SE SONO NEL WIDGET */
 			            console.log("CARICO IL WIDGET DI TILEDESK");
@@ -141,7 +141,7 @@
     <div class="footer-wrapper">
         <div class="container">
             <div class="footer-copyright text-center">
-                <p> &copy; Copyright {{ site.time | date: '%Y' }} {{site.title}} - Powered by <a href="https://tiledesk.com/">Tiledesk</a></p>
+                <p> &copy; Copyright {{ site.time | date: '%Y' }} {{site.title}} - Powered by <a href="https://tiledesk.com/" target="_blank">Tiledesk</a></p>
             </div>
         </div>
     </div>
