@@ -109,7 +109,7 @@ collections:
     #permalink: /help-center/:categories/:year/:month/:day/:title:output_ext
     #permalink: /help-center/:slugified_categories/:title/
     #permalink: /help-center/:categories/:title/
-    permalink: /articles/:title/
+    permalink: /articles/:title
     #permalink: /:categories/:title/ # INSERISCE LA CATEGORIA NELL'URL
     #permalink: /:categories/:path
   # Archives
