@@ -38,8 +38,8 @@
       {% if page.tags.size > 0 %}
       <ul class="single-tags list-inline float-left">
          <strong>Tag:</strong> {% for tag in page.tags %}
-         <li class="list-inline-item"> 
-            <a class="text-capitalize" href="{{ "/" | relative_url }}tags/{{ tag | slugify }}"
+         <li class="list-inline-item">
+            <a class="text-capitalize" href="{{ "/" | relative_url }}tags/{{ tag | slugify }}/"
             style="font-size: {{ tag | last | size  |  times: 4 | plus: 80  }}%">
                      {{ tag | replace:'-', ' ' }}
             </a>
