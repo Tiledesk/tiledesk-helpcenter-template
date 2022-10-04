@@ -26,7 +26,7 @@
            <!--DEB1 {{all_posts_of_section.size}} DEB2 {{section_key}} DEB3 {{section_cat_key}}-->
             {% if all_posts_of_section.size > 0 %}
               {% assign my_section_url = "/categories/" | append: section.url %}
-              <a href="{{ my_section_url  | relative_url }}" class="article_link">{{ section.label }}</a>
+              <a href="{{ my_section_url  | relative_url }}/" class="article_link">{{ section.label }}</a>
               <p class="archive__item-excerpt" itemprop="description"></p>
             {% else %}
               {{ section.label }}
