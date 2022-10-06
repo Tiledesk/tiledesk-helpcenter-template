@@ -30,7 +30,7 @@
          </ul>
       </div>
    </div>
-   <div class="single-content">
+   <div id="bodyarticle" class="single-content">
       {{page.content}}
    </div>
     <!--nasconde i TAG del POST quando siamo nel widget-->
@@ -62,6 +62,15 @@
 {% endif %}
 <!--PER CAPIRE CHE SIAMO NEL WIDGET E' NECESSARIO AGGIUNGERE ALL'URL /?embedded=tiledesk-->
 <script>
+   // ------------------------------------------
+   const h2elements = document.getElementById('bodyarticle').getElementsByTagName('h2');
+   console.log('h2 lengh: ', h2elements.length);
+   for (let i = 0; i < h2elements.length; i++) {
+      h2elements[i].setAttribute('id', slugify(h2elements[i].innerText));
+      console.log('h2 text',h2elements[i].innerText);
+      console.log('h2 id',h2elements[i].id);
+   }      
+   //-------------------------------------------
    const queryString = window.location.search;
    console.log("queryString "+queryString);
    const urlParams = new URLSearchParams(queryString);
@@ -80,4 +89,28 @@
    }
    return collection;
  }
+ function slugify(str)
+{
+    str = str.replace(/^\s+|\s+$/g, '');
+
+    // Make the string lowercase
+    str = str.toLowerCase();
+
+    // Remove accents, swap ñ for n, etc
+    var from = "ÁÄÂÀÃÅČÇĆĎÉĚËÈÊẼĔȆÍÌÎÏŇÑÓÖÒÔÕØŘŔŠŤÚŮÜÙÛÝŸŽáäâàãåčçćďéěëèêẽĕȇíìîïňñóöòôõøðřŕšťúůüùûýÿžþÞĐđßÆa·/_,:;";
+    var to   = "AAAAAACCCDEEEEEEEEIIIINNOOOOOORRSTUUUUUYYZaaaaaacccdeeeeeeeeiiiinnooooooorrstuuuuuyyzbBDdBAa------";
+    for (var i=0, l=from.length ; i<l ; i++) {
+        str = str.replace(new RegExp(from.charAt(i), 'g'), to.charAt(i));
+    }
+
+    // Remove invalid chars
+    str = str.replace(/[^a-z0-9 -]/g, '') 
+    // Collapse whitespace and replace by -
+    .replace(/\s+/g, '-') 
+    // Collapse dashes
+    .replace(/-+/g, '-'); 
+
+    return str;
+}
  </script>
+
