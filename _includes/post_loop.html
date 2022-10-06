@@ -63,12 +63,13 @@
 <!--PER CAPIRE CHE SIAMO NEL WIDGET E' NECESSARIO AGGIUNGERE ALL'URL /?embedded=tiledesk-->
 <script>
    // ------------------------------------------
-   const h2elements = document.getElementById('bodyarticle').getElementsByTagName('h2');
-   console.log('h2 lengh: ', h2elements.length);
-   for (let i = 0; i < h2elements.length; i++) {
-      h2elements[i].setAttribute('id', slugify(h2elements[i].innerText));
-      console.log('h2 text',h2elements[i].innerText);
-      console.log('h2 id',h2elements[i].id);
+   //const h2elements = document.getElementById('bodyarticle').getElementsByTagName('h2');
+   const helements = document.getElementById('bodyarticle').querySelectorAll("h1, h2, h3, h4, h5, h6");
+   console.log('h lengh: ', helements.length);
+   for (let i = 0; i < helements.length; i++) {
+      helements[i].setAttribute('id', slugify(helements[i].innerText));
+      console.log('h text',helements[i].innerText);
+      console.log('h id',helements[i].id);
    }      
    //-------------------------------------------
    const queryString = window.location.search;
