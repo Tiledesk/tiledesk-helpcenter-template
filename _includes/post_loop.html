@@ -63,13 +63,24 @@
 <!--PER CAPIRE CHE SIAMO NEL WIDGET E' NECESSARIO AGGIUNGERE ALL'URL /?embedded=tiledesk-->
 <script>
    // ------------------------------------------
-   //const h2elements = document.getElementById('bodyarticle').getElementsByTagName('h2');
+   //CREATE ANCHOR TITLE
    const helements = document.getElementById('bodyarticle').querySelectorAll("h1, h2, h3, h4, h5, h6");
    console.log('h lengh: ', helements.length);
    for (let i = 0; i < helements.length; i++) {
       helements[i].setAttribute('id', slugify(helements[i].innerText));
       console.log('h text',helements[i].innerText);
       console.log('h id',helements[i].id);
+      appendButton(helements[i].id,"#"+helements[i].id);
+   }
+    //CREATE BUTTON TO ANCHOR
+   function appendButton(elementId, url){
+      var buttonEl = document.createElement("a");
+      buttonEl.href = url;
+      var buttonTextEl = document.createElement("span");
+      buttonTextEl.className = "anchor";
+      buttonTextEl.innerText = "#";
+      buttonEl.appendChild(buttonTextEl);
+      document.getElementById(elementId).appendChild(buttonEl);
    }      
    //-------------------------------------------
    const queryString = window.location.search;

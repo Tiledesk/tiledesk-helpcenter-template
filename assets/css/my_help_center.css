@@ -951,3 +951,97 @@ blockquote {
   border-color: #d6eafc;
   margin: 0 0 1rem;
 }
+
+/* ---------------------- ANCHOR CSS ------------------------------------------*/
+.anchor {
+  color: rgb(136, 153, 168);
+  visibility: visible;
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  padding-left: 8px;
+  padding-bottom: 10px;
+ 
+} 
+
+/* H1 */
+#bodyarticle h1:not(:hover) .anchor{
+  visibility: hidden;
+}
+
+#bodyarticle h1:hover .anchor{
+  visibility: visible;
+  font-size: 34px;
+}
+
+#bodyarticle h1:hover .anchor:hover{
+  color: #167acc;
+}
+
+/* H2 */
+#bodyarticle h2:not(:hover) .anchor{
+  visibility: hidden;
+}
+
+#bodyarticle h2:hover .anchor{
+  visibility: visible;
+  font-size: 28px;
+}
+
+#bodyarticle h2:hover .anchor:hover{
+  color: #167acc;
+}
+
+/* H3 */
+#bodyarticle h3:not(:hover) .anchor{
+  visibility: hidden;
+}
+
+#bodyarticle h3:hover .anchor{
+  visibility: visible;
+  font-size: 24px;
+}
+
+#bodyarticle h3:hover .anchor:hover{
+  color: #167acc;
+}
+
+/* H4 */
+#bodyarticle h4:not(:hover) .anchor{
+  visibility: hidden;
+}
+
+#bodyarticle h4:hover .anchor{
+  visibility: visible;
+  font-size: 22px;
+}
+
+#bodyarticle h4:hover .anchor:hover{
+  color: #167acc;
+}
+/* H5 */
+#bodyarticle h5:not(:hover) .anchor{
+  visibility: hidden;
+}
+
+#bodyarticle h5:hover .anchor{
+  visibility: visible;
+  font-size: 20px;
+}
+
+#bodyarticle h5:hover .anchor:hover{
+  color: #167acc;
+}
+
+/* H6 */
+#bodyarticle h6:not(:hover) .anchor{
+  visibility: hidden;
+}
+
+#bodyarticle h6:hover .anchor{
+  visibility: visible;
+  font-size: 18px;
+}
+
+#bodyarticle h6:hover .anchor:hover{
+  color: #167acc;
+}
+/* ---------------------- ANCHOR CSS END------------------------------------------*/
