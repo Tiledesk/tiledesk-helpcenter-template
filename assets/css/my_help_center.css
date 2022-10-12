@@ -958,7 +958,7 @@ blockquote {
   visibility: visible;
   font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
   padding-left: 8px;
-  padding-bottom: 10px;
+  padding-bottom: 0px;
  
 } 
 
@@ -983,7 +983,7 @@ blockquote {
 
 #bodyarticle h2:hover .anchor{
   visibility: visible;
-  font-size: 28px;
+  font-size: 20px;
 }
 
 #bodyarticle h2:hover .anchor:hover{
@@ -1011,7 +1011,7 @@ blockquote {
 
 #bodyarticle h4:hover .anchor{
   visibility: visible;
-  font-size: 22px;
+  font-size: 18px;
 }
 
 #bodyarticle h4:hover .anchor:hover{

@@ -76,10 +76,12 @@
    function appendButton(elementId, url){
       var buttonEl = document.createElement("a");
       buttonEl.href = url;
-      var buttonTextEl = document.createElement("span");
-      buttonTextEl.className = "anchor";
-      buttonTextEl.innerText = "#";
-      buttonEl.appendChild(buttonTextEl);
+      buttonEl.className = "anchor";
+      buttonEl.innerText = "#";
+      //var buttonTextEl = document.createElement("span");
+      // buttonTextEl.className = "anchor";
+      // buttonTextEl.innerText = "#";
+      //buttonEl.appendChild(buttonTextEl);
       document.getElementById(elementId).appendChild(buttonEl);
    }      
    //-------------------------------------------
