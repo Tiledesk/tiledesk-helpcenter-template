@@ -114,8 +114,12 @@
 			            console.log("urlParams-widget "+urlParams2);
                         console.log("window.parent.location "+window.parent.location);
 			            console.log("window.location "+window.location);
+                        var widget_active = "{{site.data.tiledesk.widget_active | json}}";
+                        console.log("widget_active ", widget_active);
                         if ((urlParams2 == "embedded=tiledesk") || (window.parent.location === window.location)) {
                             console.log("SONO NEL WEB ");
+                            if (widget_active == "true") {
+                            console.log("WIDGET ON ");
                             var tiledesk_id = "{{site.data.tiledesk.id | json}}";
                             window.tiledeskSettings= 
                             {
@@ -130,6 +134,8 @@
                                 js.id=id; js.async=true; js.src="https://widget.tiledesk.com/v5/launch.js";
                                 fjs.parentNode.insertBefore(js, fjs);
                             }(document,'script','tiledesk-jssdk'));
+                            }
+                            if (widget_active == "false") {console.log("WIDGET OFF ");}
                         } else {
                             console.log("SONO NEL WIDGET ");
                         }
