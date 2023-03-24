@@ -103,6 +103,7 @@ DEPENDENCIES
   jekyll-tagging
   jekyll-toc
   minima (~> 2.5)
+  sass-embedded
   tzinfo (~> 1.2)
   tzinfo-data
   wdm (~> 0.1.1)
